@@ -1,17 +1,7 @@
-/* #sketch {
-    float: left;
-    position: relative;
-    left: -50%;
-}
-body {
-  background-color: powderblue;
-  float: left;
-  position: relative;
-  left: 50%;
-} */
-
 #sketch {
-    float: center;
-    position:relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
     
 }
