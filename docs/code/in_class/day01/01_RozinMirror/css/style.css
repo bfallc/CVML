@@ -8,3 +8,9 @@
   /* This centers our sketch vertically. */
   align-items: center;
 }
+body {
+  background-color: powderblue;
+  float: left;
+  position: relative;
+  left: 50%;
+}
