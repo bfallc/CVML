@@ -1,12 +1,7 @@
 #sketch {
-  margin: auto;
-  
-
-  /* This centers our sketch horizontally. */
-  justify-content: center;
-
-  /* This centers our sketch vertically. */
-  align-items: center;
+    float: left;
+    position: relative;
+    left: -50%;
 }
 body {
   background-color: powderblue;
