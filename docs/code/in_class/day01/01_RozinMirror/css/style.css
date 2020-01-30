@@ -1,4 +1,4 @@
-#sketch {
+/* #sketch {
     float: left;
     position: relative;
     left: -50%;
@@ -8,4 +8,10 @@ body {
   float: left;
   position: relative;
   left: 50%;
+} */
+
+#sketch {
+    float: center;
+    position:relative;
+    
 }
