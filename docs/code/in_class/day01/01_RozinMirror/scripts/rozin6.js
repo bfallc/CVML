@@ -44,7 +44,7 @@ function draw() {
       //rotate((darknessR));
       //fill(255-(darknessR*255)/20);
       let grey = 255-(darknessR * 255);
-      fill(grey);
+      fill(grey,50,50);
       //fill(255);  
       //rect(0, 0, radiusRX+8, radiusRX+8);
 
