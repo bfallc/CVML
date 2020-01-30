@@ -2,10 +2,10 @@
 let myCapture;
 
 function setup() {
-  createCanvas(640, 480);
+  //createCanvas(640, 480);
   //background(50);
-  //let canvas=createCanvas(640, 480);
-  //canvas.parent("sketch");
+  let canvas=createCanvas(640, 480);
+  canvas.parent("sketch");
   myCapture = createCapture(VIDEO);
   myCapture.hide();
   //fill(0, 255, 0);
