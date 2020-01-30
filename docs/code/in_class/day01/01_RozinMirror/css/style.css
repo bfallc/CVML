@@ -1,8 +1,7 @@
 #sketch {
     /*position:absolute;*/
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+ 
+    margin: auto;
     width: 40%;
     /*left: 50%;*/
     /*top: 50%;*/
