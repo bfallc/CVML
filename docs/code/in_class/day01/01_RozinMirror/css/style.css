@@ -1,25 +1,10 @@
 #sketch {
     /*position:absolute;*/
-    display:flex;
-    margin:auto;
-    justify-content:center;
-    align-items:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
     /*left: 50%;*/
     /*top: 50%;*/
     /*transform: translate(-50%,-50%);*/
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  display: flex;
-
-  /* This centers our sketch horizontally. */
-  justify-content: center;
-
-  /* This centers our sketch vertically. */
-  align-items: center;
 }
