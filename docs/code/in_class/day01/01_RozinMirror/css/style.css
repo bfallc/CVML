@@ -1,7 +1,7 @@
 #sketch {
     /*position:absolute;*/
     display:flex;
-    margin:0;
+    margin:auto;
     justify-content:center;
     align-items:center;
     /*left: 50%;*/
