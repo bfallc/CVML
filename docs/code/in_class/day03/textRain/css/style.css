@@ -1,18 +1,31 @@
-#sketch {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:20px;
-    margin-bottom: 5px;
-    width: 640px;
-    
+* {
+    padding: 0;
+    margin: 0;
 }
-#menu {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:0px;
-    margin-bottom: 5px;
-    width: 640px;
-    
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%, 0);
+    font-family: sans-serif;
+}
+
+p {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translate(-50%, 0);
+    font-family: sans-serif;
+}
+
+#sketch {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
