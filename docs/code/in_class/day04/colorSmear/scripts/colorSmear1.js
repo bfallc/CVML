@@ -16,7 +16,8 @@ let count = 0;
 function setup() {
   createCanvas(640, 480);
   pixelDensity(1);
-  video = createCapture(VIDEO);
+  video = createCapture
+  (VIDEO);
   //video.size(width,height);
   // The above function actually makes a separate video
   // element on the page.  The line below hides it since we are
