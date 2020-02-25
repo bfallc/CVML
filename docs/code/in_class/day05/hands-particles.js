@@ -40,30 +40,30 @@ function drawBody(body) {
     //     ellipse(body.joints[i].depthX*w, body.joints[i].depthY*h, 20, 20);
     // }
 
-    let lh = createVector(body.joints[7].depthX*w, body.joints[7].depthY*h);
-    let rh = createVector(body.joints[11].depthX*w, body.joints[11].depthY*h);
+    let leftHand = createVector(body.joints[7].depthX*w, body.joints[7].depthY*h);
+    let rightHand = createVector(body.joints[11].depthX*w, body.joints[11].depthY*h);
 
     fill(0, 255, 0);
-    ellipse(lh.x, lh.y, 20, 20);
+    ellipse(leftHand.x, leftHand.y, 20, 20);
 
     fill(0, 0, 255);
-    ellipse(rh.x, rh.y, 20, 20);
+    ellipse(rightHand.x, rightHand.y, 20, 20);
 
     
-    let mPos = p5.Vector.lerp(lh, rh, 0.5);
+    let middlePos = p5.Vector.lerp(leftHand, rightHand, 0.5);
     forceScaler = -30;
 
-    //console.log(mPos);
+    //console.log(middlePos);
 
     fill(255, 0, 0);
-    //ellipse(mPos.x, mPos.y, 40);
+    //ellipse(middlePos.x, middlePos.y, 40);
 
     for(let i = 0; i < particles.length; i++) {
     
         let p = particles[i]
-        let d = dist(mPos.x, mPos.y, p.pos.x, p.pos.y);
+        let d = dist(middlePos.x, middlePos.y, p.pos.x, p.pos.y);
         let magnitude = forceScaler / (d+15);
-        let forceDirection = p.pos.sub(mPos);
+        let forceDirection = p.pos.sub(middlePos);
         forceDirection.normalize();
         let newForce = forceDirection.mult(magnitude);
         p.force.add(newForce);
