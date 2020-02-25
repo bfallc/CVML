@@ -1,22 +1,18 @@
 let w = 1280;
 let h = 720;
 let particles = [];
-
 let kinectron;
-
 
 function setup() {
     createCanvas(w, h);
     background(0);
-
     kinectron = new Kinectron("10.75.29.87");
-
     kinectron.makeConnection();
     kinectron.startTrackedBodies(drawBody);
     console.log(kinectron);
 
     const NUM_PARTICLES = 50;
-  
+
   for(let i = 0; i < NUM_PARTICLES; i++) {
     let p = new Particle();
     particles.push(p);
@@ -24,32 +20,22 @@ function setup() {
 }
 
 function draw() {
-
-
 }
 
 
 function drawBody(body) {
     background(0);
 
-    
-    //console.log(body);
-
-    // for(let i = 0; i < body.joints.length; i++) {
-    //     fill(255, 0, 0);
-    //     ellipse(body.joints[i].depthX*w, body.joints[i].depthY*h, 20, 20);
-    // }
-
+if(body.bodyIndex == 1){
     let leftHand = createVector(body.joints[7].depthX*w, body.joints[7].depthY*h);
     let rightHand = createVector(body.joints[11].depthX*w, body.joints[11].depthY*h);
-
+    //draw left hand
     fill(0, 255, 0);
     ellipse(leftHand.x, leftHand.y, 20, 20);
-
+    //draw right hand
     fill(0, 0, 255);
     ellipse(rightHand.x, rightHand.y, 20, 20);
-
-    
+    //find middle
     let middlePos = p5.Vector.lerp(leftHand, rightHand, 0.5);
     forceScaler = -30;
 
@@ -70,6 +56,8 @@ function drawBody(body) {
     
     p.update();
     p.draw();
+
+    }
   }
 }
 
@@ -81,7 +69,7 @@ class Particle {
       this.vel = createVector(random(-10, 10), random(-10, 10));
       this.accel = createVector(random(-0.1, 0.1), random(-0.1, 0.1));
       this.color = [random(255), 255, 255];
-      this.radius = random(2, 8);
+      this.radius = random(10, 40);
       this.force = createVector(0, 0);
       this.drag = 0.97;
     }
