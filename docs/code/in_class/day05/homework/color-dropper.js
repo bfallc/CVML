@@ -155,19 +155,9 @@ function drawBody(body){
         }
 
    }
-
-      
-
-
 }
 
 
-function keyPressed(){
-    if(key == 's'){
-     save('textRain-2020-02-07.png'); 
-    }
-    
-  }
 
 /*
 
