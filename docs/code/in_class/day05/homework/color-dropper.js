@@ -1,5 +1,5 @@
-let w= 1280;
-let h = 720;
+let w= 960;
+let h = 600;
 //-------------------KINECT STUFF------------
 let kinectron;
 
@@ -127,12 +127,12 @@ function drawBody(body){
             fill(random(255),255,255, 255-(frameCount - positions[a].birth));
             noStroke();
             beginShape();
-            vertex(positions[a].hRX, positions[a].hRY+(frameCount-positions[a].birth));
-            vertex(positions[a].eRX, positions[a].eRY+(frameCount-positions[a].birth));
-            vertex(positions[a].sRX, positions[a].sRY+(frameCount-positions[a].birth));
-            vertex(positions[a].sLX, positions[a].sLY+(frameCount-positions[a].birth));
-            vertex(positions[a].eLX, positions[a].eLY+(frameCount-positions[a].birth));
-            vertex(positions[a].hLX, positions[a].hLY+(frameCount-positions[a].birth));
+            vertex(positions[a].hRX, positions[a].hRY+(frameCount-positions[a].birth)*2);
+            vertex(positions[a].eRX, positions[a].eRY+(frameCount-positions[a].birth)*2);
+            vertex(positions[a].sRX, positions[a].sRY+(frameCount-positions[a].birth)*2);
+            vertex(positions[a].sLX, positions[a].sLY+(frameCount-positions[a].birth)*2);
+            vertex(positions[a].eLX, positions[a].eLY+(frameCount-positions[a].birth)*2);
+            vertex(positions[a].hLX, positions[a].hLY+(frameCount-positions[a].birth)*2);
             endShape(CLOSE);
             //--INCREMENT DOWN!---
             // if((frameCount - positions[a].birth) > 100){
@@ -145,7 +145,7 @@ function drawBody(body){
         }
     //}
 
-    if((frameCount - timer) > 50){
+    if((frameCount - timer) > 20){
         shaped = false;
     }
     
@@ -157,7 +157,13 @@ function drawBody(body){
    }
 }
 
-
+function keyPressed(){
+    if(key == 'f'){
+    let fs = fullscreen();
+    fullscreen(!fs);
+    }
+  }
+  
 
 /*
 
