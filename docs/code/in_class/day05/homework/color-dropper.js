@@ -1,5 +1,5 @@
-let w= 960;
-let h = 600;
+let w= 1280;
+let h = 800;
 //-------------------KINECT STUFF------------
 let kinectron;
 
